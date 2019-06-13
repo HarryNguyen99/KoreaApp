@@ -62,30 +62,30 @@
             <!--android:layout_height="wrap_content"-->
             <!--android:orientation="vertical">-->
 
-            <!--<LinearLayout-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="60dp"-->
-                <!--android:layout_marginLeft="10dp"-->
-                <!--android:layout_marginTop="5dp"-->
-                <!--android:orientation="vertical"-->
-                <!--android:weightSum="3">-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:weightSum="3">
 
-                <!--<TextView-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="0dp"-->
-                    <!--android:layout_weight="2"-->
-                    <!--android:text="Cảnh Sát"-->
-                    <!--android:textColor="#FF8F07"-->
-                    <!--android:textSize="20sp" />-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:text="Cảnh Sát"
+                    android:textColor="#FF8F07"
+                    android:textSize="20sp" />
 
-                <!--<TextView-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="0dp"-->
-                    <!--android:layout_weight="1"-->
-                    <!--android:text="113"-->
-                    <!--android:textColor="#F89C2D"-->
-                    <!--android:textSize="10sp" />-->
-            <!--</LinearLayout>-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="113"
+                    android:textColor="#F89C2D"
+                    android:textSize="10sp" />
+            </LinearLayout>
 
             <!--<View-->
                 <!--android:layout_width="match_parent"-->
