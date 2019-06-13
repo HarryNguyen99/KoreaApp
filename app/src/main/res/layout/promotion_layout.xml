@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000">
+
+    <TextView
+        android:id="@+id/tv_tieu_de"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FF8F07"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:text="Khách Sạn"
+        android:textColor="#000"
+        android:textSize="25sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_tieu_de">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="10"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="3dp">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="2"
+                android:background="@drawable/yellow"
+                android:layout_marginTop="3dp"
+                android:src="@mipmap/img_logo_khach_san"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7.2"
+                android:orientation="vertical"
+                android:weightSum="2"
+                android:layout_marginLeft="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="Tên"
+                    android:textColor="#fff"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="Mô tả"
+                    android:textColor="#FD8E08"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textSize="24sp"/>
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="0.8"
+                android:src="@mipmap/ic_arrow"
+                android:padding="5dp"/>
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+</RelativeLayout>
