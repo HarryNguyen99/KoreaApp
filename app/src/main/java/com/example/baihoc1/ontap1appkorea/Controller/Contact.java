@@ -1,8 +1,10 @@
-package com.example.baihoc1.ontap1appkorea;
+package com.example.baihoc1.ontap1appkorea.Controller;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
+
+import com.example.baihoc1.ontap1appkorea.R;
 
 import java.util.ArrayList;
 
