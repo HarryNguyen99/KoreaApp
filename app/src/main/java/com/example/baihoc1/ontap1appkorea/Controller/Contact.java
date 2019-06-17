@@ -46,7 +46,7 @@ public class Contact extends AppCompatActivity {
         adapter.setData(result.getContactresult());
         rvSdtKhanCap.setAdapter(adapter);
         rvSdtKhanCap.addItemDecoration
-                (new DividerItemDecoration(this,DividerItemDecoration.HORIZONTAL));
+                (new DividerItemDecoration(this,DividerItemDecoration.VERTICAL));
 
     }
 

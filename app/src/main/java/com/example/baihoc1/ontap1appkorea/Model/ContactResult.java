@@ -19,8 +19,6 @@ public String name;
 @SerializedName("description")
 @Expose
 public String description;
-    public Object tvTenCoQuan;
-    public BreakIterator tvSdtKhanCap;
 
     public Integer getContactID() {
         return contactID;
