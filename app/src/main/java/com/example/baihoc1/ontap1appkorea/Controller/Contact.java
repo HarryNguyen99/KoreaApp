@@ -16,6 +16,7 @@ public class Contact extends AppCompatActivity {
    RecyclerView rvSdtKhanCap;
    com.example.baihoc1.ontap1appkorea.Model.Contact result;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,12 +44,10 @@ public class Contact extends AppCompatActivity {
         rvSdtKhanCap.setLayoutManager(linearLayoutManager);
         ContactAdapter adapter = new ContactAdapter();
         adapter.setContext(this);
-        adapter.setData(result.getContactresult());
+        adapter.setData(result.getContactResult());
         rvSdtKhanCap.setAdapter(adapter);
         rvSdtKhanCap.addItemDecoration
                 (new DividerItemDecoration(this,DividerItemDecoration.VERTICAL));
 
     }
-
-
 }

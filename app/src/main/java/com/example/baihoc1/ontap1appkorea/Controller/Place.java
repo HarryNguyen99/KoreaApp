@@ -50,15 +50,15 @@ public class Place extends AppCompatActivity {
         rvTaxi = findViewById(R.id.rv_sdt_taxi);
         tvChiTiet = findViewById(R.id.tv_chi_tiet);
 
-        tvChiTiet.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent chitiet = new Intent(Place.this,Detail.class);
-                startActivity(chitiet);
-
-            }
-        });
+//        tvChiTiet.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                Intent chitiet = new Intent(Place.this,Detail.class);
+//                startActivity(chitiet);
+//
+//            }
+//        });
 
 
     }

@@ -35,7 +35,7 @@ public String message;
         this.code = code;
     }
 
-    public List<ContactResult> getContactresult() {
+    public List<ContactResult> getContactResult() {
         return contactresult;
     }
 

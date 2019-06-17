@@ -28,7 +28,7 @@
         android:background="@drawable/white_round_bg"
         android:fontFamily="@font/roboto_medium"
         android:gravity="center"
-        android:text="KM"
+        android:text="프로모션"
         android:textSize="20sp"
         android:textColor="#FF0000"/>
 

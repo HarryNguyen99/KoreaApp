@@ -41,10 +41,10 @@ public Integer isMoreDetail;
 public Integer isPromotion;
 @SerializedName("longitude")
 @Expose
-public Integer longitude;
+public double longitude;
 @SerializedName("latitude")
 @Expose
-public Integer latitude;
+public double latitude;
 @SerializedName("kakaoTalk")
 @Expose
 public String kakaoTalk;

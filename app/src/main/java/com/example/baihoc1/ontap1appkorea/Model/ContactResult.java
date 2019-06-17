@@ -4,6 +4,7 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.text.BreakIterator;
+import java.util.List;
 
 public class ContactResult {
 
