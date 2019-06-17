@@ -23,9 +23,9 @@ public class Place extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.place_layout);
-        init();
-        docJson();
-        setConfigRvTaxi();
+            init();
+            docJson();
+            setConfigRvTaxi();
 
     }
 

@@ -38,9 +38,6 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlaceViewHol
         PlaceResult placeResult = data.get(i);
         placeViewHolder.tvPlaceName.setText(placeResult.getPlaceName());
 
-
-
-
     }
 
     @Override
