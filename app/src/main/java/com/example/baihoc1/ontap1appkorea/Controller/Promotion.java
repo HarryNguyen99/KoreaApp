@@ -36,7 +36,8 @@ public class Promotion extends AppCompatActivity {
         adapter.setContext(this);
         adapter.setData(result.getResult());
         rvKhachSan.setAdapter(adapter);
-        rvKhachSan.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL));
+        rvKhachSan.addItemDecoration
+                (new DividerItemDecoration(this,DividerItemDecoration.VERTICAL));
 
     }
 

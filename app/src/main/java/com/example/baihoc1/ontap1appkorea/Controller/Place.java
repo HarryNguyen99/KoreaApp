@@ -1,10 +1,13 @@
 package com.example.baihoc1.ontap1appkorea.Controller;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.baihoc1.ontap1appkorea.Controller.Adapter.PlaceAdapter;
@@ -17,6 +20,7 @@ import com.google.gson.Gson;
 public class Place extends AppCompatActivity {
     RecyclerView rvTaxi;
     com.example.baihoc1.ontap1appkorea.Model.Place result;
+    TextView tvChiTiet;
 
 
     @Override
@@ -26,7 +30,6 @@ public class Place extends AppCompatActivity {
             init();
             docJson();
             setConfigRvTaxi();
-
     }
 
     private void setConfigRvTaxi() {
@@ -45,6 +48,18 @@ public class Place extends AppCompatActivity {
 
     private void init() {
         rvTaxi = findViewById(R.id.rv_sdt_taxi);
+        tvChiTiet = findViewById(R.id.tv_chi_tiet);
+
+        tvChiTiet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent chitiet = new Intent(Place.this,Detail.class);
+                startActivity(chitiet);
+
+            }
+        });
+
 
     }
 

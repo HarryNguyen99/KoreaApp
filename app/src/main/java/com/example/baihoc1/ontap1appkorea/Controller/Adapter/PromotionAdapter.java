@@ -43,7 +43,7 @@ public class PromotionAdapter extends RecyclerView.Adapter<PromotionAdapter.Prmo
                 load(promotionResult.getPlaceDetail().getUrlLogoPlace()).
                 into(prmotionViewHolder.imgKhachSan);
         prmotionViewHolder.tvNameKS.setText(promotionResult.getPlaceDetail().getPlaceName());
-        prmotionViewHolder.tvMotaKS.setText(promotionResult.getPlaceDetail().getAddress());
+        prmotionViewHolder.tvMotaKS.setText(promotionResult.getPromotionName());
     }
 
     @Override
