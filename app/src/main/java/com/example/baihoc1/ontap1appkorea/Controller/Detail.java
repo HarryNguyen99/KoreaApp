@@ -2,16 +2,10 @@ package com.example.baihoc1.ontap1appkorea.Controller;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.example.baihoc1.ontap1appkorea.Controller.Adapter.DetailApi;
-import com.example.baihoc1.ontap1appkorea.Model.Place;
-import com.example.baihoc1.ontap1appkorea.Model.PlaceResult;
 import com.example.baihoc1.ontap1appkorea.R;
-import com.google.gson.Gson;
-
-import java.io.IOException;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -37,10 +31,10 @@ public class Detail extends AppCompatActivity {
 
     }
 
-    void getdata(){
+    void getdata() {
 
 
-        GetListPlacebody getListPlacebody = new GetListPlacebody( 6,  0,  "" );
+        GetListPromotionBody getListPromotionBody = new GetListPromotionBody(0, 0, "");
 
         //khai bao va khoi tao Retrofit
 
@@ -48,38 +42,29 @@ public class Detail extends AppCompatActivity {
                 .addConverterFactory(GsonConverterFactory.create())
                 .baseUrl("http://150.95.115.192/api/")
                 .build();
-        retrofit.create(DetailApi.class).getListPlace(getListPlacebody)
+        retrofit.create(Api.class).getListPlace(getListPromotionBody)
                 .enqueue(new Callback<ResponseBody>() {
                     @Override
                     public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                        Toast.makeText(Detail.this, "ok", Toast.LENGTH_SHORT).show();
 
-                        String strjoson = null;
-                        try {
-                            strjoson = response.body().string();
-                            Gson gson = new Gson();
-                            PlaceResult placeResult = gson.fromJson(strjoson,PlaceResult.class);
 
-                            Log.d("abc","abc");
-
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                        tvTesst.setText(strjoson);
                     }
 
                     @Override
                     public void onFailure(Call<ResponseBody> call, Throwable t) {
-                        Log.d("abc","abc");
+                        Toast.makeText(Detail.this, "cuc xi lau", Toast.LENGTH_SHORT).show();
 
                     }
                 });
 
     }
 
-    class GetListPlacebody {
-        int cateID,placeID;
+    class GetListPromotionBody {
+        int cateID, placeID;
         String searchKey;
-        public  GetListPlacebody (int cateID,int placeID, String searchKey){
+
+        public GetListPromotionBody(int cateID, int placeID, String searchKey) {
             this.cateID = cateID;
             this.placeID = placeID;
             this.searchKey = searchKey;

@@ -51,6 +51,8 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_bold"
                 android:text="Mô tả"
+                android:lines="1"
+                android:ellipsize="end"
                 android:textColor="#FD8E08"
                 android:textSize="20sp" />
 

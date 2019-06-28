@@ -1,25 +1,21 @@
-package com.example.baihoc1.ontap1appkorea.Model;
+package com.example.baihoc1.ontap1appkorea.Model.contact;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import java.text.BreakIterator;
-import java.util.List;
-
-public class ContactResult {
-
+public class Result {
     @SerializedName("contactID")
     @Expose
-    public Integer contactID;
+    private Integer contactID;
     @SerializedName("name")
     @Expose
-    public String name;
+    private String name;
     @SerializedName("phone")
     @Expose
-    public String phone;
+    private String phone;
     @SerializedName("description")
     @Expose
-    public String description;
+    private String description;
 
     public Integer getContactID() {
         return contactID;
@@ -52,4 +48,5 @@ public class ContactResult {
     public void setDescription(String description) {
         this.description = description;
     }
+
 }

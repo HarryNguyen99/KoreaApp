@@ -8,19 +8,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import com.example.baihoc1.ontap1appkorea.Model.ContactResult;
+import com.example.baihoc1.ontap1appkorea.Model.contact.Result;
 import com.example.baihoc1.ontap1appkorea.R;
 import java.util.List;
 
 public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactViewHolder> {
 
     public Context context;
-    public List<ContactResult> data;
+    public List<Result> data;
 
-    public void setContext(Context context) {
+    public ContactAdapter(Context context, List<Result> data) {
         this.context = context;
-    }
-
-    public void setData(List<ContactResult> data) {
         this.data = data;
     }
 
@@ -35,7 +33,7 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactV
 
     @Override
     public void onBindViewHolder(@NonNull ContactViewHolder contactViewHolder, int i) {
-        ContactResult contactResult = data.get(i);
+        Result contactResult = data.get(i);
         contactViewHolder.tvTenCoQuan.setText(contactResult.getName());
         contactViewHolder.tvSdtKhanCap.setText(contactResult.getPhone());
     }
@@ -45,7 +43,7 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactV
         return data.size();
     }
 
-    class ContactViewHolder extends RecyclerView.ViewHolder {
+    public class ContactViewHolder extends RecyclerView.ViewHolder {
 
         TextView tvTenCoQuan;
         TextView tvSdtKhanCap;
