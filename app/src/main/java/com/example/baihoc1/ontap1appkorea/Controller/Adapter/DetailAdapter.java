@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.baihoc1.ontap1appkorea.Model.Media;
 import com.example.baihoc1.ontap1appkorea.Model.PlaceResult;
@@ -55,6 +56,15 @@ public class DetailAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         if (data.get(position) instanceof PlaceResult) {
             HeaderViewHolder headerViewHolder = (HeaderViewHolder)viewHolder;
 
+            Picasso.get().
+                    load(((PlaceResult) data.get(position)).getUrlLogoPlace()).
+                    into(headerViewHolder.imglogoks);
+            headerViewHolder.tvNameKsDetail.setText(((PlaceResult) data.get(position)).getPlaceName());
+            headerViewHolder.tvTelephone.setText(((PlaceResult) data.get(position)).getPhone());
+            headerViewHolder.tvDiaChi.setText(((PlaceResult) data.get(position)).getAddress());
+            headerViewHolder.tvWeb.setText(((PlaceResult) data.get(position)).getUrlWeb());
+
+
         } else{
             MediaViewHolder mediaViewHolder = (MediaViewHolder)viewHolder;
             mediaViewHolder.configWithMedia((Media)data.get(position));
@@ -83,9 +93,17 @@ public class DetailAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
 
     class HeaderViewHolder extends RecyclerView.ViewHolder {
+        ImageView imglogoks;
+        TextView tvTelephone, tvDiaChi, tvWeb, tvNameKsDetail;
 
         public HeaderViewHolder(@NonNull View itemView) {
             super(itemView);
+            imglogoks = itemView.findViewById(R.id.img_logo_ks_detail);
+            tvNameKsDetail = itemView.findViewById(R.id.tv_name_ks_detail);
+            tvTelephone = itemView.findViewById(R.id.tv_telephone);
+            tvDiaChi = itemView.findViewById(R.id.tv_dia_chi);
+            tvWeb = itemView.findViewById(R.id.tv_web);
+
         }
     }
 

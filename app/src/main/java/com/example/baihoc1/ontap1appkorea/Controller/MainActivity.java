@@ -20,9 +20,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void init(){
-        tvContact = findViewById(R.id.tv_contact);
-        tvPlace = findViewById(R.id.tv_place);
-        tvPromotion = findViewById(R.id.tv_promotion);
+//        tvContact = findViewById(R.id.tv_contact);
+//        tvPlace = findViewById(R.id.tv_place);
+//        tvPromotion = findViewById(R.id.tv_promotion);
 
         tvContact.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -4,42 +4,17 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="#FF8F07"
-        android:layout_weight="2">
 
-        <ImageView
-            android:id="@+id/img_back"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:src="@mipmap/ic_back"
-            android:layout_marginLeft="10dp"
-            android:layout_gravity="center_vertical"/>
-
-        <TextView
-            android:id="@+id/tv_tieu_de"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:fontFamily="@font/roboto_bold"
-            android:gravity="center"
-            android:text="베트남 한인업소록 원더하노이"
-            android:textColor="#000"
-            android:textSize="23sp"
-            android:layout_weight="1"/>
-    </LinearLayout>
 
 
     <ImageView
-        android:id="@+id/img_logo_ks"
+        android:id="@+id/img_logo_ks_detail"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_gravity="center"
-       android:layout_marginTop="20dp"
         android:src="@mipmap/img_logo_khach_san"/>
     <TextView
+        android:id="@+id/tv_name_ks_detail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cục Xì Lầu"

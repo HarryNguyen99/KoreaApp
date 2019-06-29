@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Controller.Detail">
+        <activity android:name=".Controller.Detail" android:parentActivityName=".Controller.Promotion">
 
         </activity>
         <activity android:name=".Controller.Promotion">

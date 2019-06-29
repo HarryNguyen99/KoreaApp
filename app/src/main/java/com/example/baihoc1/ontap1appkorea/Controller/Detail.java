@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,6 +28,7 @@ public class Detail extends AppCompatActivity {
     ArrayList<Object> data = new ArrayList<>();
     RecyclerView rvPlaceDetail;
     DetailAdapter adapter;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,17 +37,25 @@ public class Detail extends AppCompatActivity {
         init();
         configRV();
         getData();
+        setToolBar();
+    }
+
+    private void setToolBar() {
+        toolbar = findViewById(R.id.tb_tieu_de);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
     }
 
     private void getData() {
         PlaceResult placeResult = (PlaceResult)getIntent().getSerializableExtra("promotion");
-
         data.add(placeResult);
-        Log.d("", "getData: ");
-        /*for(int i = 0; i< placeResult.getListMedia().size();i++){
+       // Log.d("", "getData: ");
+        for(int i = 0; i< placeResult.getListMedia().size();i++){
             data.add(placeResult.getListMedia().get(i));
         }
-        */
+
 
     }
 
