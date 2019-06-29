@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import com.example.baihoc1.ontap1appkorea.Model.ContactResult;
+import com.example.baihoc1.ontap1appkorea.Model.PlaceResult;
 import com.example.baihoc1.ontap1appkorea.Model.contact.Result;
 import com.example.baihoc1.ontap1appkorea.R;
 import java.util.List;
@@ -15,10 +16,13 @@ import java.util.List;
 public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactViewHolder> {
 
     public Context context;
-    public List<Result> data;
+    public List<ContactResult> data;
 
-    public ContactAdapter(Context context, List<Result> data) {
+    public void setContext(Context context) {
         this.context = context;
+    }
+
+    public void setData(List<ContactResult> data) {
         this.data = data;
     }
 
@@ -33,7 +37,7 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactV
 
     @Override
     public void onBindViewHolder(@NonNull ContactViewHolder contactViewHolder, int i) {
-        Result contactResult = data.get(i);
+        ContactResult contactResult = data.get(i);
         contactViewHolder.tvTenCoQuan.setText(contactResult.getName());
         contactViewHolder.tvSdtKhanCap.setText(contactResult.getPhone());
     }

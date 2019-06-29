@@ -1,6 +1,7 @@
 package com.example.baihoc1.ontap1appkorea.Controller.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -8,9 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
-import com.example.baihoc1.ontap1appkorea.Model.PlaceDetail;
+import com.example.baihoc1.ontap1appkorea.Controller.Detail;
 import com.example.baihoc1.ontap1appkorea.Model.PromotionResult;
 import com.example.baihoc1.ontap1appkorea.R;
 import com.example.baihoc1.ontap1appkorea.interfaces.OnClickSccues;
@@ -42,16 +43,21 @@ public class PromotionAdapter extends RecyclerView.Adapter<PromotionAdapter.Prmo
 
     @Override
     public void onBindViewHolder(@NonNull PrmotionViewHolder prmotionViewHolder, final int i) {
-        PromotionResult promotionResult = data.get(i);
+        final PromotionResult promotionResult = data.get(i);
         Picasso.get().
-                load(promotionResult.getPlaceDetail().getUrlLogoPlace()).
+                load(promotionResult.getUrlImage()).
                 into(prmotionViewHolder.imgKhachSan);
-        prmotionViewHolder.tvNameKS.setText(promotionResult.getPlaceDetail().getPlaceName());
+        prmotionViewHolder.tvNameKS.setText(promotionResult.getPromotionName());
         prmotionViewHolder.tvMotaKS.setText(promotionResult.getPromotionName());
         prmotionViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onClickSccues.onClickSucces(i);
+               // onClickSccues.onClickSucces(i);
+                Intent promotiondetail = new Intent(context, Detail.class);
+                promotiondetail.putExtra("promotion",promotionResult.getPlaceResult());
+                Toast.makeText(context, ""+promotionResult.getPlaceResult(), Toast.LENGTH_SHORT).show();
+                //context.startActivity(promotiondetail);
+
             }
         });
     }

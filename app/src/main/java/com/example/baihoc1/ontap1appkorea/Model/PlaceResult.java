@@ -1,10 +1,11 @@
 package com.example.baihoc1.ontap1appkorea.Model;
 
+import java.io.Serializable;
 import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class PlaceResult {
+public class PlaceResult implements Serializable {
 
 @SerializedName("placeID")
 @Expose
@@ -50,7 +51,7 @@ public double latitude;
 public String kakaoTalk;
 @SerializedName("listMedia")
 @Expose
-public List<Object> listMedia = null;
+public List<Media> listMedia = null;
 
     public Integer getPlaceID() {
         return placeID;
@@ -164,11 +165,11 @@ public List<Object> listMedia = null;
         this.kakaoTalk = kakaoTalk;
     }
 
-    public List<Object> getListMedia() {
+    public List<Media> getListMedia() {
         return listMedia;
     }
 
-    public void setListMedia(List<Object> listMedia) {
+    public void setListMedia(List<Media> listMedia) {
         this.listMedia = listMedia;
     }
 }

@@ -33,11 +33,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class Contact extends AppCompatActivity {
 
     RecyclerView rvSdtKhanCap;
-    com.example.baihoc1.ontap1appkorea.Model.Contact result;
-    ContactResponse contactResponse;
-    List<Result> data = new ArrayList<>();
-    Gson gson = new Gson();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,7 +53,9 @@ public class Contact extends AppCompatActivity {
                 .enqueue(new Callback<ResponseBody>() {
                     @Override
                     public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                        String strJson = null;
+                        Log.d("onResponse", "onResponse: ");
+                    }
+                       /* String strJson = null;
                         try {
                             strJson = response.body().string();
                             Gson gson = new Gson();
@@ -68,7 +65,9 @@ public class Contact extends AppCompatActivity {
                                     new LinearLayoutManager(Contact.this,
                                             LinearLayoutManager.VERTICAL, false);
                             rvSdtKhanCap.setLayoutManager(linearLayoutManager);
-                            ContactAdapter adapter = new ContactAdapter(Contact.this, data);
+                            ContactAdapter adapter = new ContactAdapter();
+                            adapter.setContext(Contact.this);
+                            adapter.setData(contact.getContactResult());
                             rvSdtKhanCap.setAdapter(adapter);
                             rvSdtKhanCap.addItemDecoration(new DividerItemDecoration
                                     (Contact.this, DividerItemDecoration.VERTICAL));
@@ -79,11 +78,12 @@ public class Contact extends AppCompatActivity {
                         }
 
 
-                    }
+                    }*/
 
                     @Override
                     public void onFailure(Call<ResponseBody> call, Throwable t) {
-                        Toast.makeText(Contact.this, "that bai", Toast.LENGTH_SHORT).show();
+                        Log.d("onFailure", "onFailure: ");
+                       // Toast.makeText(Contact.this, "that bai", Toast.LENGTH_SHORT).show();
                     }
                 });
     }

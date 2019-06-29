@@ -1,10 +1,11 @@
 package com.example.baihoc1.ontap1appkorea.Model;
 
+import java.io.Serializable;
 import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class PlaceDetail {
+public class PlaceDetail implements Serializable {
 
 @SerializedName("placeID")
 @Expose

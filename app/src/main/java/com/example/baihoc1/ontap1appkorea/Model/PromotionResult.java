@@ -3,9 +3,10 @@ package com.example.baihoc1.ontap1appkorea.Model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class PromotionResult {
+public class PromotionResult implements Serializable {
 
 @SerializedName("promotionID")
 @Expose
@@ -16,9 +17,9 @@ public String urlImage;
 @SerializedName("promotionName")
 @Expose
 public String promotionName;
-@SerializedName("placeDetail")
+@SerializedName("placeResult")
 @Expose
-public PlaceDetail placeDetail;
+public PlaceResult placeResult;
 
 
     public Integer getPromotionID() {
@@ -45,11 +46,11 @@ public PlaceDetail placeDetail;
         this.promotionName = promotionName;
     }
 
-    public PlaceDetail getPlaceDetail() {
-        return placeDetail;
+    public PlaceResult getPlaceResult() {
+        return placeResult;
     }
 
-    public void setPlaceDetail(PlaceDetail placeDetail) {
-        this.placeDetail = placeDetail;
+    public void setPlaceResult(PlaceResult placeResult) {
+        this.placeResult = placeResult;
     }
 }

@@ -12,14 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Controller.Detail">
+
         </activity>
         <activity android:name=".Controller.Promotion">
-
         </activity>
         <activity android:name=".Controller.Place">
 
         </activity>
         <activity android:name=".Controller.Contact">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
