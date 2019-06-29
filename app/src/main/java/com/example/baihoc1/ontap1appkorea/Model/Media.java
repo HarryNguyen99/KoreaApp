@@ -7,12 +7,12 @@ import java.io.Serializable;
 
 public class Media implements Serializable {
 
-    @SerializedName("urlID")
-    @Expose
-    public String urlID;
-    @SerializedName("type")
-    @Expose
-    public Integer type;
+@SerializedName("urlID")
+@Expose
+public String urlID;
+@SerializedName("type")
+@Expose
+public Integer type;
 
     public String getUrlID() {
         return urlID;

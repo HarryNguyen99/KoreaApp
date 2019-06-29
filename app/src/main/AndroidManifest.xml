@@ -15,17 +15,18 @@
 
         </activity>
         <activity android:name=".Controller.Promotion">
-        </activity>
-        <activity android:name=".Controller.Place">
-
-        </activity>
-        <activity android:name=".Controller.Contact">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".Controller.Place">
+
+        </activity>
+        <activity android:name=".Controller.Contact">
+
 
         </activity>
         <activity android:name=".Controller.MainActivity">

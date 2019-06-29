@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import com.example.baihoc1.ontap1appkorea.Model.ContactResult;
 import com.example.baihoc1.ontap1appkorea.Model.PlaceResult;
-import com.example.baihoc1.ontap1appkorea.Model.contact.Result;
 import com.example.baihoc1.ontap1appkorea.R;
 import java.util.List;
 

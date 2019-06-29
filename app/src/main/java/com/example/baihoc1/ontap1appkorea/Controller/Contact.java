@@ -10,8 +10,6 @@ import android.widget.Toast;
 
 import com.example.baihoc1.ontap1appkorea.Controller.Adapter.ContactAdapter;
 import com.example.baihoc1.ontap1appkorea.Model.ContactResult;
-import com.example.baihoc1.ontap1appkorea.Model.contact.ContactResponse;
-import com.example.baihoc1.ontap1appkorea.Model.contact.Result;
 import com.example.baihoc1.ontap1appkorea.R;
 import com.example.baihoc1.ontap1appkorea.Util.UtilDocJson;
 import com.google.gson.Gson;

@@ -62,12 +62,7 @@ public class Promotion extends AppCompatActivity {
                                             LinearLayoutManager.VERTICAL,false);
                             rvKhachSan.setLayoutManager(linearLayoutManager);
                             PromotionAdapter adapter = new PromotionAdapter();
-                            adapter.setContext(Promotion.this, new OnClickSccues() {
-                                @Override
-                                public void onClickSucces(int position) {
-                                    startActivity(new Intent(getApplicationContext(), Detail.class));
-                                }
-                            });
+                            adapter.setContext(Promotion.this);
                             adapter.setData(promotion.getResult());
                             rvKhachSan.setAdapter(adapter);
                             rvKhachSan.addItemDecoration

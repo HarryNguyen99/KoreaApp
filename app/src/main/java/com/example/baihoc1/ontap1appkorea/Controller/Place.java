@@ -52,7 +52,7 @@ public class Place extends AppCompatActivity {
                     rvTaxi.setLayoutManager(linearLayoutManager);
                     PlaceAdapter adapter = new PlaceAdapter();
                     adapter.setContext(Place.this);
-                    adapter.setData(place.getPlaceResult());
+                    adapter.setData(place.getPlaceResults());
                     rvTaxi.setAdapter(adapter);
                     rvTaxi.addItemDecoration(new DividerItemDecoration
                             (Place.this, DividerItemDecoration.VERTICAL));

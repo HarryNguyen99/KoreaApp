@@ -3,9 +3,6 @@ package com.example.baihoc1.ontap1appkorea.Model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import java.text.BreakIterator;
-import java.util.List;
-
 public class ContactResult {
 
     @SerializedName("contactID")

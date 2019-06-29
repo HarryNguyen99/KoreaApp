@@ -1,57 +1,58 @@
 package com.example.baihoc1.ontap1appkorea.Model;
 
-import java.io.Serializable;
-import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
+import java.util.List;
+
 public class PlaceResult implements Serializable {
 
-@SerializedName("placeID")
-@Expose
-public Integer placeID;
-@SerializedName("placeName")
-@Expose
-public String placeName;
-@SerializedName("urlLogoPlace")
-@Expose
-public String urlLogoPlace;
-@SerializedName("categoryID")
-@Expose
-public Integer categoryID;
-@SerializedName("address")
-@Expose
-public String address;
-@SerializedName("phone")
-@Expose
-public String phone;
-@SerializedName("urlWeb")
-@Expose
-public String urlWeb;
-@SerializedName("description")
-@Expose
-public String description;
-@SerializedName("urlBanner")
-@Expose
-public Object urlBanner;
-@SerializedName("isMoreDetail")
-@Expose
-public Integer isMoreDetail;
-@SerializedName("isPromotion")
-@Expose
-public Integer isPromotion;
-@SerializedName("longitude")
-@Expose
-public double longitude;
-@SerializedName("latitude")
-@Expose
-public double latitude;
-@SerializedName("kakaoTalk")
-@Expose
-public String kakaoTalk;
-@SerializedName("listMedia")
-@Expose
-public List<Media> listMedia = null;
+    @SerializedName("placeID")
+    @Expose
+    public Integer placeID;
+    @SerializedName("placeName")
+    @Expose
+    public String placeName;
+    @SerializedName("urlLogoPlace")
+    @Expose
+    public String urlLogoPlace;
+    @SerializedName("categoryID")
+    @Expose
+    public Integer categoryID;
+    @SerializedName("address")
+    @Expose
+    public String address;
+    @SerializedName("phone")
+    @Expose
+    public String phone;
+    @SerializedName("urlWeb")
+    @Expose
+    public String urlWeb;
+    @SerializedName("description")
+    @Expose
+    public String description;
+    @SerializedName("urlBanner")
+    @Expose
+    public Object urlBanner;
+    @SerializedName("isMoreDetail")
+    @Expose
+    public Integer isMoreDetail;
+    @SerializedName("isPromotion")
+    @Expose
+    public Integer isPromotion;
+    @SerializedName("longitude")
+    @Expose
+    public double longitude;
+    @SerializedName("latitude")
+    @Expose
+    public double latitude;
+    @SerializedName("kakaoTalk")
+    @Expose
+    public String kakaoTalk;
+    @SerializedName("listMedia")
+    @Expose
+    public List<Media> listMedia = null;
 
     public Integer getPlaceID() {
         return placeID;

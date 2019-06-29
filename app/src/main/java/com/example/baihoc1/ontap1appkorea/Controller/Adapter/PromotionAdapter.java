@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,11 +23,9 @@ import java.util.List;
 public class PromotionAdapter extends RecyclerView.Adapter<PromotionAdapter.PrmotionViewHolder> {
     public Context context;
     public List<PromotionResult> data;
-    OnClickSccues onClickSccues;
 
-    public void setContext(Context context, OnClickSccues onClickSccues) {
+    public void setContext(Context context) {
         this.context = context;
-        this.onClickSccues = onClickSccues;
     }
 
     public void setData(List<PromotionResult> data) {
@@ -44,6 +43,8 @@ public class PromotionAdapter extends RecyclerView.Adapter<PromotionAdapter.Prmo
     @Override
     public void onBindViewHolder(@NonNull PrmotionViewHolder prmotionViewHolder, final int i) {
         final PromotionResult promotionResult = data.get(i);
+
+
         Picasso.get().
                 load(promotionResult.getUrlImage()).
                 into(prmotionViewHolder.imgKhachSan);
@@ -55,8 +56,7 @@ public class PromotionAdapter extends RecyclerView.Adapter<PromotionAdapter.Prmo
                // onClickSccues.onClickSucces(i);
                 Intent promotiondetail = new Intent(context, Detail.class);
                 promotiondetail.putExtra("promotion",promotionResult.getPlaceResult());
-                Toast.makeText(context, ""+promotionResult.getPlaceResult(), Toast.LENGTH_SHORT).show();
-                //context.startActivity(promotiondetail);
+                context.startActivity(promotiondetail);
 
             }
         });
