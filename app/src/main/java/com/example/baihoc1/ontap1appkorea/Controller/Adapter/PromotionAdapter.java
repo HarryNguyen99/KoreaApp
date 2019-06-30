@@ -48,7 +48,7 @@ public class PromotionAdapter extends RecyclerView.Adapter<PromotionAdapter.Prmo
         Picasso.get().
                 load(promotionResult.getUrlImage()).
                 into(prmotionViewHolder.imgKhachSan);
-        prmotionViewHolder.tvNameKS.setText(promotionResult.getPromotionName());
+        prmotionViewHolder.tvNameKS.setText(promotionResult.getPlaceResult().placeName);
         prmotionViewHolder.tvMotaKS.setText(promotionResult.getPromotionName());
         prmotionViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

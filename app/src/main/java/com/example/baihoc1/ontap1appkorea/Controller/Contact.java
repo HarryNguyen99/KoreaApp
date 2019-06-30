@@ -42,49 +42,48 @@ public class Contact extends AppCompatActivity {
     }
 
     private void getdata() {
-        Retrofit retrofit = new Retrofit
+        final Retrofit retrofit = new Retrofit
                 .Builder()
                 .baseUrl("http://150.95.115.192/api/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
-        retrofit.create(Api.class).getContact(new Object())
-                .enqueue(new Callback<ResponseBody>() {
-                    @Override
-                    public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                        Log.d("onResponse", "onResponse: ");
-                    }
-                       /* String strJson = null;
-                        try {
-                            strJson = response.body().string();
-                            Gson gson = new Gson();
-                            com.example.baihoc1.ontap1appkorea.Model.Contact contact = gson.fromJson
-                                    (strJson, com.example.baihoc1.ontap1appkorea.Model.Contact.class);
-                            LinearLayoutManager linearLayoutManager =
-                                    new LinearLayoutManager(Contact.this,
-                                            LinearLayoutManager.VERTICAL, false);
-                            rvSdtKhanCap.setLayoutManager(linearLayoutManager);
-                            ContactAdapter adapter = new ContactAdapter();
-                            adapter.setContext(Contact.this);
-                            adapter.setData(contact.getContactResult());
-                            rvSdtKhanCap.setAdapter(adapter);
-                            rvSdtKhanCap.addItemDecoration(new DividerItemDecoration
-                                    (Contact.this, DividerItemDecoration.VERTICAL));
+        retrofit.create(Api.class).getContact(new Object()).enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                 Toast.makeText(Contact.this, "ok", Toast.LENGTH_SHORT).show();
+               String strJson = null;
+                try {
+                    strJson = response.body().string();
+                    Gson gson = new Gson();
+                    com.example.baihoc1.ontap1appkorea.Model.Contact contact = gson.fromJson
+                            (strJson, com.example.baihoc1.ontap1appkorea.Model.Contact.class);
+                    LinearLayoutManager linearLayoutManager =
+                            new LinearLayoutManager(Contact.this,
+                                    LinearLayoutManager.VERTICAL, false);
+                    rvSdtKhanCap.setLayoutManager(linearLayoutManager);
+                    ContactAdapter adapter = new ContactAdapter();
+                    adapter.setContext(Contact.this);
+                    adapter.setData(contact.getContactResult());
+                    rvSdtKhanCap.setAdapter(adapter);
+                    rvSdtKhanCap.addItemDecoration(new DividerItemDecoration
+                            (Contact.this, DividerItemDecoration.VERTICAL));
 
 
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
 
+            @Override
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+                Toast.makeText(Contact.this, "thai bai", Toast.LENGTH_SHORT).show();
 
-                    }*/
-
-                    @Override
-                    public void onFailure(Call<ResponseBody> call, Throwable t) {
-                        Log.d("onFailure", "onFailure: ");
-                       // Toast.makeText(Contact.this, "that bai", Toast.LENGTH_SHORT).show();
-                    }
-                });
+            }
+        });
     }
+
+
+
 
     private void init() {
         rvSdtKhanCap = findViewById(R.id.rv_sdt_khancap);

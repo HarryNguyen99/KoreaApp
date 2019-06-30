@@ -1,6 +1,7 @@
 package com.example.baihoc1.ontap1appkorea.Controller.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.baihoc1.ontap1appkorea.Controller.Detail;
 import com.example.baihoc1.ontap1appkorea.Model.PlaceResult;
 import com.example.baihoc1.ontap1appkorea.R;
 import com.example.baihoc1.ontap1appkorea.interfaces.OnClickSccues;
@@ -35,8 +37,8 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlaceViewHol
     }
 
     @Override
-    public void onBindViewHolder(@NonNull PlaceViewHolder placeViewHolder, final int i) {
-        PlaceResult result = data.get(i);
+    public void onBindViewHolder(@NonNull final PlaceViewHolder placeViewHolder, final int i) {
+        final PlaceResult result = data.get(i);
         placeViewHolder.tvPlaceName.setText(result.getPlaceName());
         if (data.get(i).getIsPromotion()==1){
             placeViewHolder.tvKhuyenMai.setVisibility(View.VISIBLE);
@@ -48,6 +50,14 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlaceViewHol
             @Override
             public void onClick(View v) {
                 onClickSccues.onClickSucces(i);
+            }
+        });
+        placeViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent placedetail = new Intent(context, Detail.class);
+                placedetail.putExtra("promotion",data.get(i));
+                context.startActivity(placedetail);
             }
         });
 

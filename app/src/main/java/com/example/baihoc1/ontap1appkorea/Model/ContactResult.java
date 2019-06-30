@@ -3,7 +3,9 @@ package com.example.baihoc1.ontap1appkorea.Model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class ContactResult {
+import java.io.Serializable;
+
+public class ContactResult implements Serializable {
 
     @SerializedName("contactID")
     @Expose

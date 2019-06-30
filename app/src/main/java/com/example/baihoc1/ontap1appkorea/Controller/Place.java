@@ -38,7 +38,7 @@ public class Place extends AppCompatActivity {
                 .addConverterFactory(GsonConverterFactory.create())
                 .baseUrl("http://150.95.115.192/api/")
                 .build();
-        retrofit.create(Api.class).getListPlace(getListPlacebody).enqueue(new Callback<ResponseBody>() {
+        retrofit.create(Api.class).getContact(getListPlacebody).enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 String strJson = null;
